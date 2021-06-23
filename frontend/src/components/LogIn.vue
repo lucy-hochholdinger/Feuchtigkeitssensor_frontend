@@ -1,6 +1,5 @@
 <template>
   <div id="LogIn">
-    <router-link/>
     <div class="bubble1"></div>
     <div class="bubble2"></div>
     <div class="bubble3"></div>
