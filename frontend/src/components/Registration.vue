@@ -5,10 +5,8 @@
     <div class="page">Neuer Account</div>
     <input type="text" placeholder="   Benutzername" id="username" />
     <input type="text" placeholder="   Passwort" id="password" />
-    <button id="logInButton">Anmelden</button>
-    <div class="passwordForget">Passwort vergessen</div>
-    <div class="textborderunderlineP"></div>
-    <div class="register">Neu bei uns?</div>
+    <button id="registerButton">Erstellen</button>
+    <div class="login"><router-link to="/login">LogIn</router-link></div>
     <div class="textborderunderlineR"></div>
   </div>
 </template>
@@ -76,7 +74,7 @@ export default {
     height: 49px;
     left: 52px;
     top: 322px;
-    background: #E4E4E4;
+    background: #ffffff;
     border-radius: 22px;
 
     font-family: Roboto;
@@ -85,7 +83,7 @@ export default {
     font-size: 18px;
     line-height: 21px;
     /* identical to box height */
-    color: #757575;
+    color: #2B641C;
   }
 
   #password {
@@ -94,7 +92,7 @@ export default {
     height: 49px;
     left: 52px;
     top: 387px;
-    background: #E4E4E4;
+    background: #ffffff;
     border-radius: 22px;
 
     font-family: Roboto;
@@ -103,9 +101,9 @@ export default {
     font-size: 18px;
     line-height: 21px;
     /* identical to box height */
-    color: #757575;
+    color: #2B641C;
   }
-  #logInButton{
+  #registerButton{
     position: absolute;
     width: 90px;
     height: 36px;
@@ -122,51 +120,28 @@ export default {
     /* identical to box height */
     color: #FFFF;
   }
-  .passwordForget{
+  .login{
     position: absolute;
-    width: 118px;
+    width: 36px;
     height: 15px;
-    left: 129px;
-    top: 547px;
+    left: 274px;
+    top: 588px;
 
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
     line-height: 15px;
+    text-decoration-line: underline;
 
-    color: #434343;
-  }
-    .textborderunderlineP{
-    position: relative;
-    width: 119px;
-    height: 0px;
-    left: 128px;
-    top: 561px;
-
-    border: 1px solid #AAB95A;
-  }
-  .register{
-    position: relative;
-    width: 75px;
-    height: 15px;
-    left: 153px;
-    top: 585px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 15px;
-
-    color: #434343;
+    color: #012D04;
   }
   .textborderunderlineR{
     position: relative;
-    width: 75px;
+    width: 36px;
     height: 0px;
-    left: 152px;
-    top: 585px;
+    left: 274px;
+    top: 603px;
 
     border: 1px solid #AAB95A;
   }

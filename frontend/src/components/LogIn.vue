@@ -6,7 +6,7 @@
     <div class="page">Wilkommen zurück</div>
     <input type="text" placeholder="   Benutzername" id="username" />
     <input type="text" placeholder="   Passwort" id="password" />
-    <button id="logInButton">Anmelden</button>
+    <button id="logInButton"><router-link to="/homepage">Anmelden</router-link></button>
     <div class="passwordForget">Passwort vergessen</div>
     <div class="textborderunderlineP"></div>
     <div class="register"><router-link to="/registration">Neu bei uns?</router-link></div>
@@ -84,7 +84,7 @@ export default {
     height: 49px;
     left: 52px;
     top: 322px;
-    background: #E4E4E4;
+    background: #ffffff;
     border-radius: 22px;
 
     font-family: Roboto;
@@ -102,7 +102,7 @@ export default {
     height: 49px;
     left: 52px;
     top: 387px;
-    background: #E4E4E4;
+    background: #ffffff;
     border-radius: 22px;
 
     font-family: Roboto;
