@@ -3,7 +3,8 @@
   <div class="bubble1"></div>
   <div class="bubble2"></div>
   <div class="bubble3"></div>
-  <div class="usernameBox">
+  <input type="text" placeholder="   Raum" id="usernameBox"/>
+  <div class="textboxunderline">
     <div class="username">Benutzername</div>
   </div>
   <div class="passwordBox">
@@ -57,7 +58,7 @@ top: -192px;
 border-radius: 100%;
 background: #AAB95A;
 }
-.usernameBox{
+#usernameBox{
 position: absolute;
 width: 271px;
 height: 49px;
