@@ -1,6 +1,5 @@
 <template>
   <div id="LogIn">
-    <router-link/>
     <div class="bubble1"></div>
     <div class="bubble2"></div>
     <div class="bubble3"></div>
@@ -10,14 +9,14 @@
     <button id="logInButton">Anmelden</button>
     <div class="passwordForget">Passwort vergessen</div>
     <div class="textborderunderlineP"></div>
-    <div class="register"><router-link to="/registration">Neu bei uns?</router-link></div>
+    <div class="register">Neu bei uns?</div>
     <div class="textborderunderlineR"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'LogIn',
+  name: 'Registration',
   props: {}
 }
 
