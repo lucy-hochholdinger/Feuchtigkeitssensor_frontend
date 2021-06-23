@@ -8,7 +8,10 @@
     <div class="sensor1"></div>
     <div class="sensor2"></div>
     <div id="menubar">
-    <img src="@/assets/menubar.svg"/>
+    <span class="material-icons">
+      home
+    </span>
+    <img src="@/assets/menubar.svg">
     </div>
   </div>
 </template>
@@ -124,5 +127,12 @@ export default {
     height: 99.5px;
     left: -10px;
     top: 589.5px;
+  }
+  .material-icons {
+  position: absolute;
+  height: 16px;
+  width: 100%;
+  margin: auto;
+  color: #161616;
   }
 </style>
