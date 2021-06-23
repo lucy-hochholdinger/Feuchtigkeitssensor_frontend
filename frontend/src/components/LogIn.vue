@@ -26,10 +26,12 @@ export default {
 <style scoped>
   #LogIn {
     overflow: hidden;
-    position: relative;
+    position: fixed;
     background-color: #F0F0F0;
     width: 375px;
     height: 667px;
+    top: 0;
+    left: 0;
   }
 
   #bubble1 {

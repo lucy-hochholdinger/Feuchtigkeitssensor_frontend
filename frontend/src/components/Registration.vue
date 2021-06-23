@@ -23,10 +23,12 @@ export default {
 <style scoped>
   #Registration {
     overflow: hidden;
-    position: relative;
+    position: fixed;
     background-color: #7C9D42;
     width: 375px;
     height: 667px;
+    top: 0;
+    left: 0;
   }
 
   #bubble4 {

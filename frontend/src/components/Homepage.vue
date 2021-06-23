@@ -8,18 +8,21 @@
     <div class="sensor1"></div>
     <div class="sensor2"></div>
     <div id="menubar">
-    <span class="material-icons">
-      home
-    </span>
+    <menu-icon/>
     <img src="@/assets/menubar.svg">
     </div>
   </div>
 </template>
 
 <script>
+import MenuIcon from 'vue-material-design-icons/Menu.vue'
+
 export default {
   name: 'Homepage',
-  props: {}
+  props: {},
+  components: {
+    MenuIcon
+  }
 }
 
 </script>
@@ -28,10 +31,12 @@ export default {
 <style scoped>
   #Homepage {
     overflow: hidden;
-    position: relative;
+    position: fixed;
     background-color: #f7f7f7;
     width: 375px;
     height: 667px;
+    top: 0;
+    left: 0;
   }
   .Header{
     position: absolute;
@@ -39,6 +44,7 @@ export default {
     height: 97px;
     left: 0px;
     top: 0px;
+    margin: 0%;
 
     background: #7C9D42;
   }
