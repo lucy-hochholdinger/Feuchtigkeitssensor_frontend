@@ -1,8 +1,8 @@
 <template>
   <div id="LogIn">
-    <div class="bubble1"></div>
-    <div class="bubble2"></div>
-    <div class="bubble3"></div>
+    <div id="bubble1"></div>
+    <div id="bubble2"></div>
+    <div id="bubble3"></div>
     <div class="page">Wilkommen zurück</div>
     <input type="text" placeholder="   Benutzername" id="username" />
     <input type="text" placeholder="   Passwort" id="password" />
@@ -32,7 +32,7 @@ export default {
     height: 667px;
   }
 
-  .bubble1 {
+  #bubble1 {
     position: absolute;
     width: 274px;
     height: 354px;
@@ -42,7 +42,7 @@ export default {
     background: #7C9D42;
   }
 
-  .bubble2 {
+  #bubble2 {
     position: absolute;
     width: 536.97px;
     height: 457.74px;
@@ -53,7 +53,7 @@ export default {
     transform: rotate(-30deg);
   }
 
-  .bubble3 {
+  #bubble3 {
     position: absolute;
     width: 330px;
     height: 258px;

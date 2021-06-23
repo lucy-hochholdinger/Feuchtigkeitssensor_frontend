@@ -1,9 +1,8 @@
 <template>
-  <div id="LogIn">
-    <div class="bubble1"></div>
-    <div class="bubble2"></div>
-    <div class="bubble3"></div>
-    <div class="page">Wilkommen zurück</div>
+  <div id="Registration">
+    <div id="bubble4"></div>
+    <div id="bubble5"></div>
+    <div class="page">Neuer Account</div>
     <input type="text" placeholder="   Benutzername" id="username" />
     <input type="text" placeholder="   Passwort" id="password" />
     <button id="logInButton">Anmelden</button>
@@ -24,44 +23,37 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  #LogIn {
+  #Registration {
     overflow: hidden;
     position: relative;
-    background-color: #F0F0F0;
+    background-color: #7C9D42;
     width: 375px;
     height: 667px;
   }
 
-  .bubble1 {
+  #bubble4 {
     position: absolute;
-    width: 274px;
-    height: 354px;
-    left: 188px;
-    top: -56px;
+    width: 537px;
+    height: 458px;
+    left: -100px;
+    top: -210px;
     border-radius: 100%;
-    background: #7C9D42;
-  }
 
-  .bubble2 {
-    position: absolute;
-    width: 536.97px;
-    height: 457.74px;
-    left: -107px;
-    top: -200px;
-    border-radius: 100%;
     background: #2B641C;
     transform: rotate(-30deg);
   }
 
-  .bubble3 {
+  #bubble5 {
     position: absolute;
-    width: 330px;
-    height: 258px;
-    left: -92px;
-    top: -192px;
+    width: 351px;
+    height: 313px;
+    left: 119px;
+    top: 466px;
     border-radius: 100%;
-    background: #AAB95A;
+
+    background: #FFFFFF;
   }
+
   .page{
     position: absolute;
     width: 285px;
