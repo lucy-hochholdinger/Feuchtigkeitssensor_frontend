@@ -3,6 +3,7 @@
     <div id="bubble4"></div>
     <div id="bubble5"></div>
     <div class="page">Neuer Account</div>
+    <input type="text" placeholder="   E-Mail-Adresse" id="emailadress" />
     <input type="text" placeholder="   Benutzername" id="username" />
     <input type="text" placeholder="   Passwort" id="password" />
     <button id="registerButton">Erstellen</button>
@@ -48,7 +49,7 @@ export default {
     width: 351px;
     height: 313px;
     left: 119px;
-    top: 466px;
+    top: 515px;
     border-radius: 100%;
 
     background: #FFFFFF;
@@ -70,12 +71,30 @@ export default {
 
     color: #FFFFFF;
   }
+  #emailadress{
+    position: absolute;
+    width: 271px;
+    height: 49px;
+    left: 52px;
+    top: 273px;
+
+    background: #ffffff;
+    border-radius: 22px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #2B641C;
+  }
   #username {
     position: absolute;
     width: 271px;
     height: 49px;
     left: 52px;
-    top: 322px;
+    top: 338px;
     background: #ffffff;
     border-radius: 22px;
 
@@ -93,7 +112,7 @@ export default {
     width: 271px;
     height: 49px;
     left: 52px;
-    top: 387px;
+    top: 403px;
     background: #ffffff;
     border-radius: 22px;
 
@@ -110,11 +129,11 @@ export default {
     width: 90px;
     height: 36px;
     left: 234px;
-    top: 459px;
+    top: 475px;
     background: #2B641C;
     border-radius: 20px;
 
-        font-family: Roboto;
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

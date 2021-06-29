@@ -8,21 +8,27 @@
     <div class="sensor1"></div>
     <div class="sensor2"></div>
     <div id="menubar">
-   <span class="material-icons">
-          home
-    </span>
-    <img src="@/assets/menubar.svg">
+      <span id="homebutton" class="material-icons">
+        home
+      </span>
+      <div class="homebuttontext">STARTSEITE</div>
+      <div class="addcircle"></div>
+      <span id="addbutton" class="material-icons">
+        add
+      </span>
+      <span id="profilebutton" class="material-icons">
+        person
+      </span>
+      <div class="profilebuttontext">PROFIL</div>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
   name: 'Homepage',
   props: {},
-  components: {
-  }
+  components: {}
 }
 
 </script>
@@ -38,7 +44,8 @@ export default {
     top: 0;
     left: 0;
   }
-  .Header{
+
+  .Header {
     position: absolute;
     width: 375px;
     height: 97px;
@@ -48,7 +55,8 @@ export default {
 
     background: #7C9D42;
   }
-  #bubble6{
+
+  #bubble6 {
     position: absolute;
     width: 201px;
     height: 160px;
@@ -58,11 +66,12 @@ export default {
 
     background: #AAB95A;
   }
-  #usernameHeader{
+
+  #usernameHeader {
     position: absolute;
     width: 105px;
     height: 16px;
-    left: 16px;
+    left: 24px;
     top: 52px;
 
     font-family: Roboto;
@@ -76,7 +85,8 @@ export default {
 
     color: #FFFFFF;
   }
-  .weatherdata{
+
+  .weatherdata {
     position: absolute;
     width: 329px;
     height: 163px;
@@ -87,11 +97,12 @@ export default {
     box-shadow: 0px 4px 4px rgba(194, 194, 194, 0.25);
     border-radius: 20px;
   }
-  #Sensors{
+
+  #Sensors {
     position: absolute;
     width: 79px;
     height: 16px;
-    left: 23px;
+    left: 24px;
     top: 306px;
 
     font-family: Roboto;
@@ -105,7 +116,8 @@ export default {
 
     color: #161616;
   }
-  .sensor1{
+
+  .sensor1 {
     position: absolute;
     width: 160px;
     height: 128px;
@@ -116,7 +128,8 @@ export default {
     box-shadow: 0px 4px 4px rgba(194, 194, 194, 0.25);
     border-radius: 20px;
   }
-  .sensor2{
+
+  .sensor2 {
     position: absolute;
     width: 160px;
     height: 128px;
@@ -127,18 +140,100 @@ export default {
     box-shadow: 0px 4px 4px rgba(194, 194, 194, 0.25);
     border-radius: 20px;
   }
-  #menubar{
+
+  #menubar {
     position: absolute;
     width: 397px;
     height: 99.5px;
     left: -10px;
     top: 589.5px;
+    background-image: url("~@/assets/menubar.svg");
   }
+
+  #homebutton {
+    width: 25px;
+    height: 24px;
+    left: 48px;
+    top: 32px;
+    color: #000000;
+  }
+
+  .homebuttontext {
+    position: absolute;
+    width: 60px;
+    height: 16px;
+    left: 29px;
+    top: 55px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 16px;
+    /* identical to box height, or 160% */
+
+    text-align: center;
+    letter-spacing: 0.4px;
+
+    color: #012D04;
+  }
+
+  #addbutton {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 187px;
+    top: 30px;
+    color: #ffffff;
+  }
+
+  .addcircle {
+    position: relative;
+    width: 58px;
+    height: 58px;
+    left: 170px;
+    top: 13px;
+
+    background: #AAB95A;
+    border-radius: 100%;
+  }
+
+  #profilebutton {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 315px;
+    top: 32px;
+
+    color: #BDBDBD;
+  }
+
+  .profilebuttontext {
+    position: absolute;
+    width: 35px;
+    height: 16px;
+    left: 311px;
+    top: 55px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 16px;
+    /* identical to box height, or 160% */
+
+    text-align: center;
+    letter-spacing: 0.4px;
+
+    color: #BDBDBD;
+  }
+
   .material-icons {
-  position: absolute;
-  height: 16px;
-  width: 100%;
-  margin: auto;
-  color: #161616;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    margin: auto;
+    color: #161616;
   }
+
 </style>

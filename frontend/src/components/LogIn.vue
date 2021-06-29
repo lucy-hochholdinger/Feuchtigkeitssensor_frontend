@@ -124,12 +124,15 @@ export default {
     background: #2B641C;
     border-radius: 20px;
 
-        font-family: Roboto;
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
     /* identical to box height */
+    color: #FFFF;
+  }
+  #logInButton:visited{
     color: #FFFF;
   }
   .passwordForget{
