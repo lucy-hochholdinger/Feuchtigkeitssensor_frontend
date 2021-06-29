@@ -25,11 +25,11 @@
 </template>
 
 <script>
-export default {
-  name: 'Homepage',
-  props: {},
-  components: {}
-}
+  export default {
+    name: 'Homepage',
+    props: {},
+    components: {},
+  }
 
 </script>
 

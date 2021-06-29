@@ -17,15 +17,21 @@
       <div class="profilebuttontext">PROFIL</div>
       <img src="@/assets/menubar.svg">
     </div>
+    <div v-bind="currentWidth"></div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'Homepage',
-  props: {},
-  components: {}
-}
+  export default {
+    name: 'Homepage',
+    props: {},
+    components: {},
+    data() {
+      return {
+        let currentWidth = 100 - (sensorValue / 40.95)
+      }
+    }
+  }
 
 </script>
 
