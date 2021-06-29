@@ -8,20 +8,20 @@
     <div class="sensor1"></div>
     <div class="sensor2"></div>
     <div id="menubar">
-    <menu-icon/>
+   <span class="material-icons">
+          home
+    </span>
     <img src="@/assets/menubar.svg">
     </div>
   </div>
 </template>
 
 <script>
-import MenuIcon from 'vue-material-design-icons/Menu.vue'
 
 export default {
   name: 'Homepage',
   props: {},
   components: {
-    MenuIcon
   }
 }
 
