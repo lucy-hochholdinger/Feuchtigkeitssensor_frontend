@@ -5,7 +5,9 @@
     <div id="usernameHeader">Hallo Eugen</div>
     <div class="weatherdata"></div>
     <div id="Sensors">Sensoren</div>
+    <router-link to="/homepage/sensor1">
     <div class="sensor1"></div>
+    </router-link>
     <div class="sensor2"></div>
     <div id="menubar">
       <span id="homebutton" class="material-icons">
@@ -25,11 +27,11 @@
 </template>
 
 <script>
-  export default {
-    name: 'Homepage',
-    props: {},
-    components: {},
-  }
+export default {
+  name: 'Homepage',
+  props: {},
+  components: {}
+}
 
 </script>
 
