@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import LogIn from '../components/LogIn.vue'
 import Registration from '../components/Registration.vue'
 import Homepage from '../components/Homepage.vue'
+import SensorOne from '../components/SensorOne.vue'
 
 Vue.use(VueRouter)
 
@@ -20,6 +21,11 @@ const routes = [
     path: '/homepage',
     name: 'Homepage',
     component: Homepage
+  },
+  {
+    path: '/homepage/sensor1',
+    name: 'SensorOne',
+    component: SensorOne
   },
   {
     path: '/registration',
