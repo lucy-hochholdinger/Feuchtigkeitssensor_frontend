@@ -8,22 +8,6 @@
     <div id="sensorName">Sensor 1</div>
     <div class="sensorData">
       <GraphBar v-for="graphs"></GraphBar>
-      <div id="graygrid1"></div>
-      <div id="bluegrid1"></div>
-      <div id="graygrid2"></div>
-      <div id="bluegrid2"></div>
-      <div id="graygrid3"></div>
-      <div id="bluegrid3"></div>
-      <div id="graygrid4"></div>
-      <div id="bluegrid4"></div>
-      <div id="graygrid5"></div>
-      <div id="bluegrid5"></div>
-      <div id="graygrid6"></div>
-      <div id="bluegrid6"></div>
-      <div id="graygrid7"></div>
-      <div id="bluegrid7"></div>
-      <div id="graygrid8"></div>
-      <div id="bluegrid8"></div>
     </div>
     <div class="Werte">Werte</div>
     <div id="menubar">
@@ -45,13 +29,15 @@
 </template>
 
 <script>
+import GraphBar from '../components/Graphbar.vue'
 export default {
   name: 'SensorOne',
   props: {},
   components: {},
   mounted: function() { 
     // api call for last week
-    // speichern in data
+    // durchschnitt für jeden tag ausrechnen und in data speichern
+    // 
     // gibt sowas:
     // [{mac: "fvhdifvh", value: 123, "createdAt": "dfsdfs"},
 // {mac: "fvhdifvh", value: 123, "createdAt": "dfsdfs"},
