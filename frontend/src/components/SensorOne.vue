@@ -7,7 +7,7 @@
     </router-link>
     <div id="sensorName">Sensor 1</div>
     <div class="sensorData">
-      <GraphBar v-for="graphs"></GraphBar>
+      <GraphBar></GraphBar>
     </div>
     <div class="Werte">Werte</div>
     <div id="menubar">
@@ -30,11 +30,28 @@
 
 <script>
 import GraphBar from '../components/Graphbar.vue'
+
 export default {
   name: 'SensorOne',
   props: {},
-  components: {},
+  components: {
+    GraphBar
+  },
   mounted: function() { 
+    app.post('/api/getLastWeek', (req, res) => {
+    console.log("looking for last 8 values");
+    let sentData = req.body;
+    waterData.find({"macAddress": sentData.mac}).sort({'createdAt': -1}).limit(32)
+    .then(async (latest) => {
+        res.send(latest);
+    })
+}),
+  data() {
+    return {
+       let currentHeight = 100 - (sensorValue / 40.95),
+       
+    }
+  }
     // api call for last week
     // durchschnitt für jeden tag ausrechnen und in data speichern
     // 
@@ -45,11 +62,7 @@ export default {
 // {mac: "fvhdifvh", value: 123, "createdAt": "dfsdfs"}
 // {mac: "fvhdifvh", value: 123, "createdAt": "dfsdfs"}]
   }
-  // data() {
-  //   return {
-  //     // let currentHeight = 100 - (sensorValue / 40.95)
-  //   }
-  // }
+  
 }
 
 </script>
