@@ -7,6 +7,7 @@
     </router-link>
     <div id="sensorName">Sensor 1</div>
     <div class="sensorData">
+      <GraphBar v-for="graphs"></GraphBar>
       <div id="graygrid1"></div>
       <div id="bluegrid1"></div>
       <div id="graygrid2"></div>
@@ -38,7 +39,6 @@
         person
       </span>
       <div class="profilebuttontext">PROFIL</div>
-      <img src="@/assets/menubar.svg">
     </div>
     <!-- <div v-bind="currentHeight"></div> -->
   </div>
@@ -48,7 +48,17 @@
 export default {
   name: 'SensorOne',
   props: {},
-  components: {}
+  components: {},
+  mounted: function() { 
+    // api call for last week
+    // speichern in data
+    // gibt sowas:
+    // [{mac: "fvhdifvh", value: 123, "createdAt": "dfsdfs"},
+// {mac: "fvhdifvh", value: 123, "createdAt": "dfsdfs"},
+// {mac: "fvhdifvh", value: 123, "createdAt": "dfsdfs"},
+// {mac: "fvhdifvh", value: 123, "createdAt": "dfsdfs"}
+// {mac: "fvhdifvh", value: 123, "createdAt": "dfsdfs"}]
+  }
   // data() {
   //   return {
   //     // let currentHeight = 100 - (sensorValue / 40.95)
@@ -209,6 +219,7 @@ export default {
       height: 99.5px;
       left: -10px;
       top: 589.5px;
+      background-image: url("~@/assets/menubar.svg");
     }
 
     #homebutton {
