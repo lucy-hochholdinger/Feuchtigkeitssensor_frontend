@@ -36,10 +36,12 @@ export default {
       const uri = 'http://localhost:3001/api/login'
       axios.post(uri, userData)
         .then(function (response) {
-          console.log(response)
+          console.log('Response from backend: ')
+          console.log(response.data.result)
         })
         .catch(function (err) {
-          console.log(err)
+          console.log('Error while registering: ')
+          console.log(error)
         })
     }
   }

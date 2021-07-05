@@ -38,17 +38,21 @@ export default {
   components: {
     GraphBar
   },
-  mounted: function () {
-    const uri = 'http://localhost:3002/api/login'
-    axios.post(uri, (req, res) => {
-      console.log('looking for last 8 values')
-      let sentData = req.body
-      waterData.find()({ 'macAddress': sentData.mac })
-        .sort({ 'createdAt': -1 }).limit(32)
-        .then(async (latest) => {
-          res.send(latest)
+  mounted () {
+    this.waterData()
+  },
+  methods: {
+    waterData () {
+      const uri = 'http://localhost:3002/api/getLastWeek'
+      axios.post(uri)
+        .then(res => {
+          console.log(res)
         })
-    })
+        .catch(function (err) {
+          console.log('Error while get waterData: ')
+          console.log(err)
+        })
+    }
   },
   data () {
     return {
