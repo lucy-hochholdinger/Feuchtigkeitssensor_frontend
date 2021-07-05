@@ -13,9 +13,34 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'Registration',
-  props: {}
+  props: {
+  },
+  data () {
+    return {
+      username: '',
+      password: ''
+    }
+  },
+  methods: {
+    registerUser: function () {
+      const userData = {
+        username: this.username,
+        password: this.password
+      }
+      const uri = 'http://localhost:3001/api/register'
+      axios.post(uri, userData)
+        .then(function (response) {
+          console.log(response)
+        })
+        .catch(function (err) {
+          console.log(err)
+        })
+    }
+  }
 }
 
 </script>

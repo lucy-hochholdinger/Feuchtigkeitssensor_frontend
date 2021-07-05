@@ -15,11 +15,35 @@
 </template>
 
 <script>
-export default {
-  name: 'LogIn',
-  props: {}
-}
+import axios from 'axios'
 
+export default {
+  name: 'Login',
+  props: {
+  },
+  data () {
+    return {
+      username: '',
+      password: ''
+    }
+  },
+  methods: {
+    loginUser: function () {
+      const userData = {
+        username: this.username,
+        password: this.password
+      }
+      const uri = 'http://localhost:3001/api/login'
+      axios.post(uri, userData)
+        .then(function (response) {
+          console.log(response)
+        })
+        .catch(function (err) {
+          console.log(err)
+        })
+    }
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

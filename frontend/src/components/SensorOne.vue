@@ -1,9 +1,9 @@
 <template>
   <div id="Sensor">
     <router-link to="/homepage">
-    <span id="arrowback" class="material-icons">
-    arrow_back_ios_new
-    </span>
+      <span id="arrowback" class="material-icons">
+        arrow_back_ios_new
+      </span>
     </router-link>
     <div id="sensorName">Sensor 1</div>
     <div class="sensorData">
@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import GraphBar from '../components/Graphbar.vue'
 
 export default {
@@ -37,32 +38,23 @@ export default {
   components: {
     GraphBar
   },
-  mounted: function() { 
-    app.post('/api/getLastWeek', (req, res) => {
-    console.log("looking for last 8 values");
-    let sentData = req.body;
-    waterData.find({"macAddress": sentData.mac}).sort({'createdAt': -1}).limit(32)
-    .then(async (latest) => {
-        res.send(latest);
+  mounted: function () {
+    const uri = 'http://localhost:3002/api/login'
+    axios.post(uri, (req, res) => {
+      console.log('looking for last 8 values')
+      let sentData = req.body
+      waterData.find()({ 'macAddress': sentData.mac })
+        .sort({ 'createdAt': -1 }).limit(32)
+        .then(async (latest) => {
+          res.send(latest)
+        })
     })
-}),
-  data() {
+  },
+  data () {
     return {
-       let currentHeight = 100 - (sensorValue / 40.95),
-       
+      //  let currentHeight = 100 - (sensorValue / 40.95)
     }
   }
-    // api call for last week
-    // durchschnitt für jeden tag ausrechnen und in data speichern
-    // 
-    // gibt sowas:
-    // [{mac: "fvhdifvh", value: 123, "createdAt": "dfsdfs"},
-// {mac: "fvhdifvh", value: 123, "createdAt": "dfsdfs"},
-// {mac: "fvhdifvh", value: 123, "createdAt": "dfsdfs"},
-// {mac: "fvhdifvh", value: 123, "createdAt": "dfsdfs"}
-// {mac: "fvhdifvh", value: 123, "createdAt": "dfsdfs"}]
-  }
-  
 }
 
 </script>
@@ -79,29 +71,26 @@ export default {
     left: 0;
   }
 
-  #arrowback{
+  #arrowback {
     position: absolute;
     width: 25px;
     height: 25px;
     left: 24px;
     top: 29px;
   }
+
   #sensorName {
     position: absolute;
     width: 125px;
     height: 36px;
     left: calc(50% - 125px/2 + 1px);
     top: 24px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
     line-height: 36px;
     text-align: center;
-
-    /* Black */
-
     color: #000000;
   }
 
@@ -111,200 +100,189 @@ export default {
     height: 251px;
     left: 23px;
     top: 92px;
-
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(194, 194, 194, 0.25);
     border-radius: 20px;
   }
-  #graygrid1{
+
+  #graygrid1 {
     position: absolute;
     width: 15px;
     height: 161px;
     left: 24px;
     top: 51px;
-
     background: #F0F0F0;
     border-radius: 20px;
   }
-  #graygrid2{
+
+  #graygrid2 {
     position: absolute;
     width: 15px;
     height: 161px;
     left: 62px;
     top: 51px;
-
     background: #F0F0F0;
     border-radius: 20px;
   }
-  #graygrid3{
+
+  #graygrid3 {
     position: absolute;
     width: 15px;
     height: 161px;
     left: 100px;
     top: 51px;
-
     background: #F0F0F0;
     border-radius: 20px;
   }
-  #graygrid4{
+
+  #graygrid4 {
     position: absolute;
     width: 15px;
     height: 161px;
     left: 137px;
     top: 51px;
-
     background: #F0F0F0;
     border-radius: 20px;
   }
-  #graygrid5{
+
+  #graygrid5 {
     position: absolute;
     width: 15px;
     height: 161px;
     left: 175px;
     top: 51px;
-
     background: #F0F0F0;
     border-radius: 20px;
   }
-  #graygrid6{
+
+  #graygrid6 {
     position: absolute;
     width: 15px;
     height: 161px;
     left: 213px;
     top: 51px;
-
     background: #F0F0F0;
     border-radius: 20px;
   }
-  #graygrid7{
+
+  #graygrid7 {
     position: absolute;
     width: 15px;
     height: 161px;
     left: 250px;
     top: 51px;
-
     background: #F0F0F0;
     border-radius: 20px;
   }
-  #graygrid8{
+
+  #graygrid8 {
     position: absolute;
     width: 15px;
     height: 161px;
     left: 288px;
     top: 51px;
-
     background: #F0F0F0;
     border-radius: 20px;
   }
-  .Werte{
+
+  .Werte {
     position: absolute;
     width: 71px;
     height: 29px;
     left: 24px;
     right: 24px;
     top: 363px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
-
     color: #000000;
   }
-    #menubar {
-      position: absolute;
-      width: 397px;
-      height: 99.5px;
-      left: -10px;
-      top: 589.5px;
-      background-image: url("~@/assets/menubar.svg");
-    }
 
-    #homebutton {
-      width: 25px;
-      height: 24px;
-      left: 48px;
-      top: 32px;
-      color: #000000;
-    }
+  #menubar {
+    position: absolute;
+    width: 397px;
+    height: 99.5px;
+    left: -10px;
+    top: 589.5px;
+    background-image: url("~@/assets/menubar.svg");
+  }
 
-    .homebuttontext {
-      position: absolute;
-      width: 60px;
-      height: 16px;
-      left: 29px;
-      top: 55px;
+  #homebutton {
+    width: 25px;
+    height: 24px;
+    left: 48px;
+    top: 32px;
+    color: #000000;
+  }
 
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 10px;
-      line-height: 16px;
-      /* identical to box height, or 160% */
+  .homebuttontext {
+    position: absolute;
+    width: 60px;
+    height: 16px;
+    left: 29px;
+    top: 55px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: #012D04;
+  }
 
-      text-align: center;
-      letter-spacing: 0.4px;
+  #addbutton {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 187px;
+    top: 30px;
+    color: #ffffff;
+  }
 
-      color: #012D04;
-    }
+  .addcircle {
+    position: relative;
+    width: 58px;
+    height: 58px;
+    left: 170px;
+    top: 13px;
+    background: #AAB95A;
+    border-radius: 100%;
+  }
 
-    #addbutton {
-      position: absolute;
-      width: 24px;
-      height: 24px;
-      left: 187px;
-      top: 30px;
-      color: #ffffff;
-    }
+  #profilebutton {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 315px;
+    top: 32px;
+    color: #BDBDBD;
+  }
 
-    .addcircle {
-      position: relative;
-      width: 58px;
-      height: 58px;
-      left: 170px;
-      top: 13px;
+  .profilebuttontext {
+    position: absolute;
+    width: 35px;
+    height: 16px;
+    left: 311px;
+    top: 55px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: #BDBDBD;
+  }
 
-      background: #AAB95A;
-      border-radius: 100%;
-    }
-
-    #profilebutton {
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      left: 315px;
-      top: 32px;
-
-      color: #BDBDBD;
-    }
-
-    .profilebuttontext {
-      position: absolute;
-      width: 35px;
-      height: 16px;
-      left: 311px;
-      top: 55px;
-
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 10px;
-      line-height: 16px;
-      /* identical to box height, or 160% */
-
-      text-align: center;
-      letter-spacing: 0.4px;
-
-      color: #BDBDBD;
-    }
-
-    .material-icons {
-      position: absolute;
-      height: 20px;
-      width: 20px;
-      margin: auto;
-      color: #161616;
-    }
+  .material-icons {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    margin: auto;
+    color: #161616;
+  }
 
 </style>
