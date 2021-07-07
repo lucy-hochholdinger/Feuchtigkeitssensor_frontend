@@ -3,12 +3,14 @@
     <div id="bubble4"></div>
     <div id="bubble5"></div>
     <div class="page">Neuer Account</div>
-    <input type="text" placeholder="   E-Mail-Adresse" id="emailadress" />
-    <input type="text" placeholder="   Benutzername" id="username" />
-    <input type="text" placeholder="   Passwort" id="password" />
-    <button id="registerButton">Erstellen</button>
+    <form @submit.prevent="registerUser" method="post" novalidate autocomplete="off">
+    <input type="text" placeholder="   E-Mail-Adresse" id="emailadress" v-model="emailadress"/>
+    <input type="text" placeholder="   Benutzername" id="username" v-model="username" />
+    <input type="text" placeholder="   Passwort" id="password" v-model="password"/>
+    <button id="registerButton" value="register">Erstellen</button>
     <div class="login"><router-link to="/login">LogIn</router-link></div>
     <div class="textborderunderlineR"></div>
+    </form>
   </div>
 </template>
 
@@ -21,13 +23,16 @@ export default {
   },
   data () {
     return {
+      emailadress: '',
       username: '',
       password: ''
     }
   },
   methods: {
     registerUser: function () {
+      console.log(this.username)
       const userData = {
+        emailadress: this.emailadress,
         username: this.username,
         password: this.password
       }

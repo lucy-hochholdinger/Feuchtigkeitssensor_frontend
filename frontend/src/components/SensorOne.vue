@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     waterData () {
-      const uri = 'http://localhost:3002/api/getLastWeek'
+      const uri = 'http://localhost:3000/api/getLastWeek'
       axios.post(uri)
         .then(res => {
           console.log(res)

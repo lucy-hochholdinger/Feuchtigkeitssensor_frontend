@@ -4,13 +4,15 @@
     <div id="bubble2"></div>
     <div id="bubble3"></div>
     <div class="page">Wilkommen zurück</div>
-    <input type="text" placeholder="   Benutzername" id="username" />
-    <input type="text" placeholder="   Passwort" id="password" />
-    <button id="logInButton"><router-link to="/homepage">Anmelden</router-link></button>
+    <form @submit.prevent="loginUser" method="post" novalidate autocomplete="off">
+    <input for="username" type="text" placeholder="   Benutzername" id="username" v-model="username" />
+    <input for="password" type="text" placeholder="   Passwort" id="password" v-model="password"/>
+    <button id="logInButton" value="login"><router-link to="/homepage">Anmelden</router-link></button>
     <div class="passwordForget">Passwort vergessen</div>
     <div class="textborderunderlineP"></div>
     <div class="register"><router-link to="/registration">Neu bei uns?</router-link></div>
     <div class="textborderunderlineR"></div>
+    </form>
   </div>
 </template>
 
@@ -29,6 +31,7 @@ export default {
   },
   methods: {
     loginUser: function () {
+      console.log(this.username)
       const userData = {
         username: this.username,
         password: this.password
@@ -41,7 +44,7 @@ export default {
         })
         .catch(function (err) {
           console.log('Error while registering: ')
-          console.log(error)
+          console.log(err)
         })
     }
   }

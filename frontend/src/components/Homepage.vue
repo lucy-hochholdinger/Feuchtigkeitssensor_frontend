@@ -6,7 +6,8 @@
     <div class="weatherdata"></div>
     <div id="Sensors">Sensoren</div>
     <router-link to="/homepage/sensor1">
-    <div class="sensor1"></div>
+      <SensorOne />
+      <div class="sensor1"></div>
     </router-link>
     <div class="sensor2"></div>
     <div id="menubar">
@@ -27,10 +28,21 @@
 </template>
 
 <script>
+import SensorOne from './SensorOne.vue'
 export default {
   name: 'Homepage',
   props: {},
-  components: {}
+  components: {
+    SensorOne
+  },
+  data () {
+    return {
+    }
+  },
+  methods: {
+
+  }
+
 }
 
 </script>
