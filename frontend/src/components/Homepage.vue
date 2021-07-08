@@ -3,7 +3,9 @@
     <!-- Backgroundstyle and Header -->
     <div class="Header"></div>
     <div id="bubble6"></div>
-    <div id="usernameHeader">Hallo Eugen</div>
+    <div id="usernameHeader">
+      Hallo Eugen
+    </div>
     <!-- Icon to log out -->
     <div id="logout" @click="logout">
       <span class="material-icons" :style="{color:'#ffffff'}">
@@ -12,7 +14,9 @@
     </div>
     <!-- div for future weather data -->
     <div class="weatherdata"></div>
-    <div id="Sensors">Sensoren</div>
+    <div id="Sensors">
+      Sensoren
+    </div>
     <!-- Router link to the detail page of the first sensor -->
     <router-link to="/homepage/sensor1">
       <div class="sensor1">
@@ -33,7 +37,9 @@
       <span id="homebutton" class="material-icons">
         home
       </span>
-      <div class="homebuttontext">STARTSEITE</div>
+      <div class="homebuttontext">
+        STARTSEITE
+      </div>
       <div class="addcircle"></div>
       <span id="addbutton" class="material-icons">
         add
@@ -41,7 +47,9 @@
       <span id="profilebutton" class="material-icons">
         person
       </span>
-      <div class="profilebuttontext">PROFIL</div>
+      <div class="profilebuttontext">
+        PROFIL
+      </div>
     </div>
   </div>
 </template>

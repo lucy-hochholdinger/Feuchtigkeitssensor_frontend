@@ -4,7 +4,9 @@
     <div id="bubble1"></div>
     <div id="bubble2"></div>
     <div id="bubble3"></div>
-    <div class="page">Wilkommen zurück</div>
+    <div class="page">
+      Wilkommen zurück
+    </div>
     <!-- Login form -->
     <form @submit.prevent="loginUser" method="post" novalidate autocomplete="off">
       <input for="username" type="text" placeholder="   Benutzername" id="username" v-model="username" />
@@ -12,11 +14,15 @@
       <button id="logInButton" value="login">
         Anmelden
       </button>
-      <div class="passwordForget">Passwort vergessen</div>
+      <div class="passwordForget">
+        Passwort vergessen
+      </div>
       <div class="textborderunderlineP"></div>
       <!-- Router link to the registration page -->
       <div class="register">
-        <router-link to="/registration">Neu bei uns?</router-link>
+        <router-link to="/registration">
+          Neu bei uns?
+        </router-link>
       </div>
       <div class="textborderunderlineR"></div>
     </form>

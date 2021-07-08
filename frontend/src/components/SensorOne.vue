@@ -7,7 +7,9 @@
       </span>
     </router-link>
     <!-- Header and sensor visualisation -->
-    <div id="sensorName">Sensor 1</div>
+    <div id="sensorName">
+      Sensor 1
+    </div>
     <div class="sensorData d-flex flex-row">
       <div class="barWrapper" v-for="s in sensorData" :key="s._id">
         <!-- Background from the graph -->
@@ -16,14 +18,18 @@
         <div class="bar" :style="{ height: `${calcHeight(s._id, s.val)}px`, backgroundColor: '#1976D2' }"></div>
       </div>
     </div>
-    <div class="Werte">Werte</div>
+    <div class="Werte">
+      Werte
+    </div>
     <!-- In future, all the sensor data should be listed here -->
     <!-- Menu bar -->
     <div id="menubar">
       <span id="homebutton" class="material-icons">
         home
       </span>
-      <div class="homebuttontext">STARTSEITE</div>
+      <div class="homebuttontext">
+        STARTSEITE
+      </div>
       <div class="addcircle"></div>
       <span id="addbutton" class="material-icons">
         add
