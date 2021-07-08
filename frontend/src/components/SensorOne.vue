@@ -7,7 +7,12 @@
     </router-link>
     <div id="sensorName">Sensor 1</div>
     <div class="sensorData">
-      <GraphBar></GraphBar>
+      <div class="barWrapper">
+        {{sensorData}} {{calcHeight()}}
+        <div class="bar" ref="graphBar"></div>
+        <div class="bar" :style="{ height: `${calcHeight()}px`, backgroundColor: 'pink' }"></div>
+      </div>
+      <!--GraphBar></!--GraphBar-->
     </div>
     <div class="Werte">Werte</div>
     <div id="menubar">
@@ -30,33 +35,43 @@
 
 <script>
 import axios from 'axios'
-import GraphBar from '../components/Graphbar.vue'
+// import GraphBar from '../components/Graphbar.vue'
 
 export default {
   name: 'SensorOne',
   props: {},
   components: {
-    GraphBar
+    // GraphBar
+  },
+  data () {
+    return {
+      //  let currentHeight = 100 - (sensorValue / 40.95)
+      sensorData: 0,
+      loaded: false
+    }
   },
   mounted () {
     this.waterData()
+    this.loaded = true
   },
   methods: {
     waterData () {
       const uri = 'http://localhost:3000/api/getLastWeek'
-      axios.post(uri)
+      axios.post(uri, { mac: '24:62:ab:f6:1e:48' })
         .then(res => {
-          console.log(res)
+          console.log(res.data)
+          this.sensorData = res.data.val
         })
         .catch(function (err) {
           console.log('Error while get waterData: ')
           console.log(err)
         })
-    }
-  },
-  data () {
-    return {
-      //  let currentHeight = 100 - (sensorValue / 40.95)
+    },
+    calcHeight () {
+      if (!this.loaded) return 10
+      // calculates the indicator widths based on the screen size
+      // return this.$refs.graphBar.clientHeight - (this.$refs.graphBar.clientHeight - ((this.sensorData / 40.95)))
+      return (this.$refs.graphBar.clientHeight - ((this.sensorData / 40.95)))
     }
   }
 }
@@ -287,6 +302,20 @@ export default {
     width: 20px;
     margin: auto;
     color: #161616;
+  }
+
+  .barWrapper {
+    position: relative;
+    width: 1rem;
+    height: 161px;
+  }
+  .bar {
+    position: absolute;
+    border-radius: 20px;
+    bottom: 0px;
+    width: 1rem;
+    height: 161px;
+    background-color: grey;
   }
 
 </style>
