@@ -6,7 +6,7 @@
       </span>
     </router-link>
     <div id="sensorName">Sensor 1</div>
-    <div class="sensorData">
+    <div class="sensorData d-flex flex-row">
       <div class="barWrapper" v-for="s in sensorData" :key="s._id">
         <div class="bar" ref="graphBar"></div>
         <div class="bar" :style="{ height: `${calcHeight(s._id, s.val)}px`, backgroundColor: 'pink' }"></div>
@@ -308,6 +308,8 @@ export default {
     position: relative;
     width: 1rem;
     height: 161px;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   .bar {
     position: absolute;
