@@ -6,7 +6,6 @@
     <div class="weatherdata"></div>
     <div id="Sensors">Sensoren</div>
     <router-link to="/homepage/sensor1">
-      <SensorOne />
       <div class="sensor1"></div>
     </router-link>
     <div class="sensor2"></div>
@@ -28,26 +27,21 @@
 </template>
 
 <script>
-import SensorOne from './SensorOne.vue'
+
 export default {
   name: 'Homepage',
   props: {},
   components: {
-    SensorOne
   },
   data () {
-    return {
-    }
+    return {}
   },
   methods: {
-
   }
-
 }
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   #Homepage {
     overflow: hidden;
@@ -66,7 +60,6 @@ export default {
     left: 0px;
     top: 0px;
     margin: 0%;
-
     background: #7C9D42;
   }
 
@@ -77,7 +70,6 @@ export default {
     left: 227px;
     top: -80px;
     border-radius: 100%;
-
     background: #AAB95A;
   }
 
@@ -87,16 +79,12 @@ export default {
     height: 16px;
     left: 24px;
     top: 52px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 16px;
-    /* identical to box height, or 89% */
-
     letter-spacing: 0.4px;
-
     color: #FFFFFF;
   }
 
@@ -106,7 +94,6 @@ export default {
     height: 163px;
     left: 23px;
     top: 116px;
-
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(194, 194, 194, 0.25);
     border-radius: 20px;
@@ -118,16 +105,12 @@ export default {
     height: 16px;
     left: 24px;
     top: 306px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 16px;
-    /* identical to box height, or 89% */
-
     letter-spacing: 0.4px;
-
     color: #161616;
   }
 
@@ -137,7 +120,6 @@ export default {
     height: 128px;
     left: 21px;
     top: 333px;
-
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(194, 194, 194, 0.25);
     border-radius: 20px;
@@ -149,7 +131,6 @@ export default {
     height: 128px;
     left: 192px;
     top: 333px;
-
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(194, 194, 194, 0.25);
     border-radius: 20px;
@@ -178,17 +159,13 @@ export default {
     height: 16px;
     left: 29px;
     top: 55px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
     line-height: 16px;
-    /* identical to box height, or 160% */
-
     text-align: center;
     letter-spacing: 0.4px;
-
     color: #012D04;
   }
 
@@ -207,7 +184,6 @@ export default {
     height: 58px;
     left: 170px;
     top: 13px;
-
     background: #AAB95A;
     border-radius: 100%;
   }
@@ -218,7 +194,6 @@ export default {
     height: 25px;
     left: 315px;
     top: 32px;
-
     color: #BDBDBD;
   }
 
@@ -228,17 +203,13 @@ export default {
     height: 16px;
     left: 311px;
     top: 55px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
     line-height: 16px;
-    /* identical to box height, or 160% */
-
     text-align: center;
     letter-spacing: 0.4px;
-
     color: #BDBDBD;
   }
 

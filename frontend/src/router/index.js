@@ -7,37 +7,29 @@ import SensorOne from '../components/SensorOne.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
-    path: '/',
-    redirect: '/login'
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: LogIn
-  },
-  {
-    path: '/homepage',
-    name: 'Homepage',
-    component: Homepage
-  },
-  {
-    path: '/homepage/sensor1',
-    name: 'SensorOne',
-    component: SensorOne
-  },
-  {
-    path: '/registration',
-    component: Registration
-    /*
-    children: [{
-      path: 'firstAdd',
-      component: CreateRoomExplain
-    }
-    ]
-    */
-  }
+const routes = [{
+  path: '/',
+  redirect: '/login'
+},
+{
+  path: '/login',
+  name: 'Login',
+  component: LogIn
+},
+{
+  path: '/homepage',
+  name: 'Homepage',
+  component: Homepage
+},
+{
+  path: '/homepage/sensor1',
+  name: 'SensorOne',
+  component: SensorOne
+},
+{
+  path: '/registration',
+  component: Registration
+}
 ]
 
 const router = new VueRouter({

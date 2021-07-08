@@ -5,13 +5,18 @@
     <div id="bubble3"></div>
     <div class="page">Wilkommen zurück</div>
     <form @submit.prevent="loginUser" method="post" novalidate autocomplete="off">
-    <input for="username" type="text" placeholder="   Benutzername" id="username" v-model="username" />
-    <input for="password" type="text" placeholder="   Passwort" id="password" v-model="password"/>
-    <button id="logInButton" value="login"><router-link to="/homepage">Anmelden</router-link></button>
-    <div class="passwordForget">Passwort vergessen</div>
-    <div class="textborderunderlineP"></div>
-    <div class="register"><router-link to="/registration">Neu bei uns?</router-link></div>
-    <div class="textborderunderlineR"></div>
+      <input for="username" type="text" placeholder="   Benutzername" id="username" v-model="username" />
+      <input for="password" type="text" placeholder="   Passwort" id="password" v-model="password" />
+      <button id="logInButton" value="login">
+        Anmelden
+        <!-- <router-link to="/homepage">Anmelden</router-link> -->
+      </button>
+      <div class="passwordForget">Passwort vergessen</div>
+      <div class="textborderunderlineP"></div>
+      <div class="register">
+        <router-link to="/registration">Neu bei uns?</router-link>
+      </div>
+      <div class="textborderunderlineR"></div>
     </form>
   </div>
 </template>
@@ -21,8 +26,7 @@ import axios from 'axios'
 
 export default {
   name: 'Login',
-  props: {
-  },
+  props: {},
   data () {
     return {
       username: '',
@@ -49,9 +53,9 @@ export default {
     }
   }
 }
+
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   #LogIn {
     overflow: hidden;
@@ -93,22 +97,22 @@ export default {
     border-radius: 100%;
     background: #AAB95A;
   }
-  .page{
+
+  .page {
     position: absolute;
     width: 285px;
     height: 131px;
     left: 23px;
     top: 89px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
     font-size: 43px;
     line-height: 50px;
     text-align: left;
-
     color: #FFFFFF;
   }
+
   #username {
     position: absolute;
     width: 271px;
@@ -117,13 +121,11 @@ export default {
     top: 322px;
     background: #ffffff;
     border-radius: 22px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    /* identical to box height */
     color: #757575;
   }
 
@@ -135,16 +137,15 @@ export default {
     top: 387px;
     background: #ffffff;
     border-radius: 22px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    /* identical to box height */
     color: #757575;
   }
-  #logInButton{
+
+  #logInButton {
     position: absolute;
     width: 90px;
     height: 36px;
@@ -152,64 +153,62 @@ export default {
     top: 459px;
     background: #2B641C;
     border-radius: 20px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
-    /* identical to box height */
     color: #FFFF;
   }
-  #logInButton:visited{
+
+  #logInButton:visited {
     color: #FFFF;
   }
-  .passwordForget{
+
+  .passwordForget {
     position: absolute;
     width: 118px;
     height: 15px;
     left: 129px;
     top: 547px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
     line-height: 15px;
-
     color: #434343;
   }
-    .textborderunderlineP{
+
+  .textborderunderlineP {
     position: relative;
     width: 119px;
     height: 0px;
     left: 128px;
     top: 561px;
-
     border: 1px solid #AAB95A;
   }
-  .register{
+
+  .register {
     position: relative;
     width: 75px;
     height: 15px;
     left: 153px;
     top: 585px;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
     line-height: 15px;
-
     color: #434343;
   }
-  .textborderunderlineR{
+
+  .textborderunderlineR {
     position: relative;
     width: 75px;
     height: 0px;
     left: 152px;
     top: 585px;
-
     border: 1px solid #AAB95A;
   }
+
 </style>

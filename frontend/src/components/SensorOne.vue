@@ -9,9 +9,8 @@
     <div class="sensorData d-flex flex-row">
       <div class="barWrapper" v-for="s in sensorData" :key="s._id">
         <div class="bar" ref="graphBar"></div>
-        <div class="bar" :style="{ height: `${calcHeight(s._id, s.val)}px`, backgroundColor: 'pink' }"></div>
+        <div class="bar" :style="{ height: `${calcHeight(s._id, s.val)}px`, backgroundColor: '#1976D2' }"></div>
       </div>
-      <!--GraphBar></!--GraphBar-->
     </div>
     <div class="Werte">Werte</div>
     <div id="menubar">
@@ -28,23 +27,18 @@
       </span>
       <div class="profilebuttontext">PROFIL</div>
     </div>
-    <!-- <div v-bind="currentHeight"></div> -->
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-// import GraphBar from '../components/Graphbar.vue'
 
 export default {
   name: 'SensorOne',
   props: {},
-  components: {
-    // GraphBar
-  },
+  components: {},
   data () {
     return {
-      //  let currentHeight = 100 - (sensorValue / 40.95)
       sensorData: null,
       loaded: false
     }
@@ -56,7 +50,9 @@ export default {
   methods: {
     waterData () {
       const uri = 'http://localhost:3000/api/getLastWeek'
-      axios.post(uri, { mac: '24:62:ab:f6:1e:48' })
+      axios.post(uri, {
+        mac: '24:62:ab:f6:1e:48'
+      })
         .then(res => {
           console.log(res.data)
           this.sensorData = res.data
@@ -68,9 +64,6 @@ export default {
     },
     calcHeight (id, val) {
       if (!this.loaded) return 10
-      // calculates the indicator widths based on the screen size
-      // return this.$refs.graphBar.clientHeight - (this.$refs.graphBar.clientHeight - ((this.sensorData / 40.95)))
-      // return (this.$refs.graphBar.clientHeight - ((val / 40.95)))
       return (161 - ((val / 40.95)))
     }
   }
@@ -78,7 +71,6 @@ export default {
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   #Sensor {
     overflow: hidden;
@@ -121,86 +113,6 @@ export default {
     top: 92px;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(194, 194, 194, 0.25);
-    border-radius: 20px;
-  }
-
-  #graygrid1 {
-    position: absolute;
-    width: 15px;
-    height: 161px;
-    left: 24px;
-    top: 51px;
-    background: #F0F0F0;
-    border-radius: 20px;
-  }
-
-  #graygrid2 {
-    position: absolute;
-    width: 15px;
-    height: 161px;
-    left: 62px;
-    top: 51px;
-    background: #F0F0F0;
-    border-radius: 20px;
-  }
-
-  #graygrid3 {
-    position: absolute;
-    width: 15px;
-    height: 161px;
-    left: 100px;
-    top: 51px;
-    background: #F0F0F0;
-    border-radius: 20px;
-  }
-
-  #graygrid4 {
-    position: absolute;
-    width: 15px;
-    height: 161px;
-    left: 137px;
-    top: 51px;
-    background: #F0F0F0;
-    border-radius: 20px;
-  }
-
-  #graygrid5 {
-    position: absolute;
-    width: 15px;
-    height: 161px;
-    left: 175px;
-    top: 51px;
-    background: #F0F0F0;
-    border-radius: 20px;
-  }
-
-  #graygrid6 {
-    position: absolute;
-    width: 15px;
-    height: 161px;
-    left: 213px;
-    top: 51px;
-    background: #F0F0F0;
-    border-radius: 20px;
-  }
-
-  #graygrid7 {
-    position: absolute;
-    width: 15px;
-    height: 161px;
-    left: 250px;
-    top: 51px;
-    background: #F0F0F0;
-    border-radius: 20px;
-  }
-
-  #graygrid8 {
-    position: absolute;
-    width: 15px;
-    height: 161px;
-    left: 288px;
-    top: 51px;
-    background: #F0F0F0;
     border-radius: 20px;
   }
 
@@ -308,16 +220,18 @@ export default {
     position: relative;
     width: 1rem;
     height: 161px;
+    margin-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
   }
+
   .bar {
     position: absolute;
     border-radius: 20px;
     bottom: 0px;
     width: 1rem;
     height: 161px;
-    background-color: grey;
+    background-color: #F0F0F0;
   }
 
 </style>
