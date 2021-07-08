@@ -1,14 +1,34 @@
 <template>
   <div id="Homepage">
+    <!-- Backgroundstyle and Header -->
     <div class="Header"></div>
     <div id="bubble6"></div>
     <div id="usernameHeader">Hallo Eugen</div>
+    <!-- Icon to log out -->
+    <div id="logout" @click="logout">
+      <span class="material-icons" :style="{color:'#ffffff'}">
+        logout
+      </span>
+    </div>
+    <!-- div for future weather data -->
     <div class="weatherdata"></div>
     <div id="Sensors">Sensoren</div>
+    <!-- Router link to the detail page of the first sensor -->
     <router-link to="/homepage/sensor1">
-      <div class="sensor1"></div>
+      <div class="sensor1">
+        <div class="sensor1text">
+          Sensor 1
+        </div>
+        <div class="sensor1icon">
+          <span class="material-icons">
+            sensors
+          </span>
+        </div>
+      </div>
     </router-link>
+    <!-- Area for future second sensor -->
     <div class="sensor2"></div>
+    <!-- Menu bar -->
     <div id="menubar">
       <span id="homebutton" class="material-icons">
         home
@@ -37,9 +57,13 @@ export default {
     return {}
   },
   methods: {
+    logout () {
+      // Token is removed when logging out and you are redirected to the login page
+      localStorage.removeItem('token')
+      this.$router.push('/login')
+    }
   }
 }
-
 </script>
 
 <style scoped>
@@ -87,7 +111,12 @@ export default {
     letter-spacing: 0.4px;
     color: #FFFFFF;
   }
-
+  #logout{
+    position: absolute;
+    left: 316px;
+    top: 48px;
+    color: #ffffff;
+  }
   .weatherdata {
     position: absolute;
     width: 329px;
@@ -123,6 +152,19 @@ export default {
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(194, 194, 194, 0.25);
     border-radius: 20px;
+  }
+
+  .sensor1text {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    color: #000000;
+  }
+
+  .sensor1icon {
+    position: absolute;
+    left: 119px;
+    top: 16px;
   }
 
   .sensor2 {

@@ -1,18 +1,24 @@
 <template>
   <div id="Sensor">
+    <!-- Navigation icon back to the homepage -->
     <router-link to="/homepage">
       <span id="arrowback" class="material-icons">
         arrow_back_ios_new
       </span>
     </router-link>
+    <!-- Header and sensor visualisation -->
     <div id="sensorName">Sensor 1</div>
     <div class="sensorData d-flex flex-row">
       <div class="barWrapper" v-for="s in sensorData" :key="s._id">
+        <!-- Background from the graph -->
         <div class="bar" ref="graphBar"></div>
+        <!-- Sensor data visualisation -->
         <div class="bar" :style="{ height: `${calcHeight(s._id, s.val)}px`, backgroundColor: '#1976D2' }"></div>
       </div>
     </div>
     <div class="Werte">Werte</div>
+    <!-- In future, all the sensor data should be listed here -->
+    <!-- Menu bar -->
     <div id="menubar">
       <span id="homebutton" class="material-icons">
         home
@@ -31,6 +37,7 @@
 </template>
 
 <script>
+// Imports axios to be able to communicate with the backend
 import axios from 'axios'
 
 export default {
@@ -44,11 +51,13 @@ export default {
     }
   },
   mounted () {
+    // Waterdata is shown
     this.waterData()
     this.loaded = true
   },
   methods: {
     waterData () {
+      // Request to backend to get the sensor data
       const uri = 'http://localhost:3000/api/getLastWeek'
       axios.post(uri, {
         mac: '24:62:ab:f6:1e:48'
@@ -62,13 +71,13 @@ export default {
           console.log(err)
         })
     },
+    // Calculation to fit the graph
     calcHeight (id, val) {
       if (!this.loaded) return 10
       return (161 - ((val / 40.95)))
     }
   }
 }
-
 </script>
 
 <style scoped>

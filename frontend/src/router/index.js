@@ -1,3 +1,4 @@
+// For the router links
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LogIn from '../components/LogIn.vue'

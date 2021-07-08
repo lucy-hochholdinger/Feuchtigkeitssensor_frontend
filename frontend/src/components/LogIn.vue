@@ -1,18 +1,20 @@
 <template>
   <div id="LogIn">
+    <!-- Backgroundstyle and Header -->
     <div id="bubble1"></div>
     <div id="bubble2"></div>
     <div id="bubble3"></div>
     <div class="page">Wilkommen zurück</div>
+    <!-- Login form -->
     <form @submit.prevent="loginUser" method="post" novalidate autocomplete="off">
       <input for="username" type="text" placeholder="   Benutzername" id="username" v-model="username" />
       <input for="password" type="text" placeholder="   Passwort" id="password" v-model="password" />
       <button id="logInButton" value="login">
         Anmelden
-        <!-- <router-link to="/homepage">Anmelden</router-link> -->
       </button>
       <div class="passwordForget">Passwort vergessen</div>
       <div class="textborderunderlineP"></div>
+      <!-- Router link to the registration page -->
       <div class="register">
         <router-link to="/registration">Neu bei uns?</router-link>
       </div>
@@ -22,6 +24,7 @@
 </template>
 
 <script>
+// Imports axios to be able to communicate with the backend
 import axios from 'axios'
 
 export default {
@@ -34,26 +37,31 @@ export default {
     }
   },
   methods: {
+    // Data storage for username and password
     loginUser: function () {
       console.log(this.username)
       const userData = {
         username: this.username,
         password: this.password
       }
+      // Request to backend
       const uri = 'http://localhost:3001/api/login'
       axios.post(uri, userData)
-        .then(function (response) {
+        .then((response) => {
           console.log('Response from backend: ')
-          console.log(response.data.result)
+          console.log(response.data)
+          // For further work with the token: localStorage.getItem('token')
+          localStorage.setItem('token', response.data.token)
+          // To get to the homepage when you are logged in
+          this.$router.push('/homepage')
         })
-        .catch(function (err) {
+        .catch((err) => {
           console.log('Error while registering: ')
           console.log(err)
         })
     }
   }
 }
-
 </script>
 
 <style scoped>

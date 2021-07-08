@@ -1,13 +1,16 @@
 <template>
   <div id="Registration">
+    <!-- Backgroundstyle and Header -->
     <div id="bubble4"></div>
     <div id="bubble5"></div>
     <div class="page">Neuer Account</div>
+    <!-- Registration form -->
     <form @submit.prevent="registerUser" method="post" novalidate autocomplete="off">
       <input type="text" placeholder="   E-Mail-Adresse" id="emailadress" v-model="emailadress" />
       <input type="text" placeholder="   Benutzername" id="username" v-model="username" />
       <input type="text" placeholder="   Passwort" id="password" v-model="password" />
-      <button id="registerButton" value="register">Erstellen</button>
+      <button id="registerButton" value="register" >Erstellen</button>
+      <!-- Router link to the login page -->
       <div class="login">
         <router-link to="/login">LogIn</router-link>
       </div>
@@ -17,6 +20,7 @@
 </template>
 
 <script>
+// Imports axios to be able to communicate with the backend
 import axios from 'axios'
 
 export default {
@@ -30,6 +34,7 @@ export default {
     }
   },
   methods: {
+    // Data storage for emailadress, username and password
     registerUser: function () {
       console.log(this.username)
       const userData = {
@@ -37,6 +42,7 @@ export default {
         username: this.username,
         password: this.password
       }
+      // Request to backend
       const uri = 'http://localhost:3001/api/register'
       axios.post(uri, userData)
         .then(function (response) {
@@ -48,7 +54,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <style scoped>
