@@ -7,10 +7,9 @@
     </router-link>
     <div id="sensorName">Sensor 1</div>
     <div class="sensorData">
-      <div class="barWrapper">
-        {{sensorData}} {{calcHeight()}}
+      <div class="barWrapper" v-for="s in sensorData" :key="s._id">
         <div class="bar" ref="graphBar"></div>
-        <div class="bar" :style="{ height: `${calcHeight()}px`, backgroundColor: 'pink' }"></div>
+        <div class="bar" :style="{ height: `${calcHeight(s._id, s.val)}px`, backgroundColor: 'pink' }"></div>
       </div>
       <!--GraphBar></!--GraphBar-->
     </div>
@@ -46,7 +45,7 @@ export default {
   data () {
     return {
       //  let currentHeight = 100 - (sensorValue / 40.95)
-      sensorData: 0,
+      sensorData: null,
       loaded: false
     }
   },
@@ -60,18 +59,19 @@ export default {
       axios.post(uri, { mac: '24:62:ab:f6:1e:48' })
         .then(res => {
           console.log(res.data)
-          this.sensorData = res.data.val
+          this.sensorData = res.data
         })
         .catch(function (err) {
           console.log('Error while get waterData: ')
           console.log(err)
         })
     },
-    calcHeight () {
+    calcHeight (id, val) {
       if (!this.loaded) return 10
       // calculates the indicator widths based on the screen size
       // return this.$refs.graphBar.clientHeight - (this.$refs.graphBar.clientHeight - ((this.sensorData / 40.95)))
-      return (this.$refs.graphBar.clientHeight - ((this.sensorData / 40.95)))
+      // return (this.$refs.graphBar.clientHeight - ((val / 40.95)))
+      return (161 - ((val / 40.95)))
     }
   }
 }
