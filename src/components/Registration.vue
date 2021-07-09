@@ -26,9 +26,6 @@
 </template>
 
 <script>
-// Imports axios to be able to communicate with the backend
-import axios from 'axios'
-
 export default {
   name: 'Registration',
   props: {},
@@ -49,8 +46,8 @@ export default {
         password: this.password
       }
       // Request to backend
-      const uri = 'http://localhost:3001/api/register'
-      axios.post(uri, userData)
+      const uri = '/api/register'
+      this.axios.post(uri, userData)
         .then(function (response) {
           console.log(response)
         })

@@ -43,9 +43,6 @@
 </template>
 
 <script>
-// Imports axios to be able to communicate with the backend
-import axios from 'axios'
-
 export default {
   name: 'SensorOne',
   props: {},
@@ -64,8 +61,8 @@ export default {
   methods: {
     waterData () {
       // Request to backend to get the sensor data
-      const uri = 'http://localhost:3000/api/getLastWeek'
-      axios.post(uri, {
+      const uri = '/api/getLastWeek'
+      this.axios.post(uri, {
         mac: '24:62:ab:f6:1e:48'
       })
         .then(res => {

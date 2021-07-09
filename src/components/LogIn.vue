@@ -30,8 +30,6 @@
 </template>
 
 <script>
-// Imports axios to be able to communicate with the backend
-import axios from 'axios'
 
 export default {
   name: 'Login',
@@ -51,8 +49,8 @@ export default {
         password: this.password
       }
       // Request to backend
-      const uri = 'http://localhost:3001/api/login'
-      axios.post(uri, userData)
+      const uri = '/api/login'
+      this.axios.post(uri, userData)
         .then((response) => {
           console.log('Response from backend: ')
           console.log(response.data)
