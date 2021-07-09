@@ -34,7 +34,7 @@ Mit **`axios`** wird mit dem Backend kommuniziert.
 
 ### Registration.vue
 * Dies ist die Registrierung, also die erste Anmeldung, in unserer Webapp.
-**`registerUser`** Hier wird die E-Mailadresse, Benutzername und Passwort abgespeichert. Das Passwort wird allerdings direkt verschlüsselt.
+    * `registerUser` Hier wird die E-Mailadresse, Benutzername und Passwort abgespeichert. Das Passwort wird allerdings direkt verschlüsselt.
 
 ## Energiebedarf
 
@@ -54,7 +54,7 @@ Mit **`axios`** wird mit dem Backend kommuniziert.
 * Unsere Messbereiche: 0 - 4095 (nass: 0, trocken: 4095)
 * Unserer Messinterval: 6 Stunden (4mal täglich)
 * Stromversorgung: Solarset 20W mit Akku "https://www.amazon.de/Esotec-120005-Solar-Set-Anschlusskabel-Laderegler/dp/B01GNOFKEM"
-    -> Dieser hat eine Akkukapazität von 8Ah
+-> Dieser hat eine Akkukapazität von 8Ah
 Da der ESP8266 den Sleep-Modus hat kann man dadurch sehr viel Strom sparen. 
 
 ## Future Work
