@@ -88,4 +88,10 @@ Um das Produkt für mehrere Nutzer zu verwenden müsste man einziges noch verän
     * nur die nötigsten Daten angeben lassen und nicht alles
     * nur Standort von den Messstationen anzeigen, nicht den Home Standort
     * Software aktuell halten
+* Code:
+    * die Wetter Api muss noch eingebunden werden, damit man das aktuelle Wetter sehen kann
+    * mehrere Sensoren einpflegen und ihre räumlich Verteilung darstellen
+    * Pairing- Prozess: Wie werden Erfassungsmodule Nutzern zugeordnet
+    * Der Nutzer soll die Sensoren einzelnen Felder zu weisen können und die jeweilige Pflanzenart eintragen können, dass wenn zu viel oder zu wenig Wasser vorhanden ist ein Alarm ausgelöst wird.
+    * Einen Ruhemodus für die ESPs -> weniger Energiebedarf
 
