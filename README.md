@@ -39,7 +39,17 @@ Mit **`axios`** wird mit dem Backend kommuniziert.
 
 ### LogIn.vue
 * Hier meldet man sich nach der Registrierung an. Es werden Benutzername und das verschlüsselte Passwort überprüft und wenn das übereinstimmt wird ein token erstellt. Jeder Benutzer hat ein anderes token, dass sich bei jeder Anmeldung ändert.
-    * 
+    * `loginUser` Hier wird der Benutzername und das verschlüsselte Passwort abgespeichert.
+    * `const uri = '/api/login'` Das ist der Endpunkt an dem die Anmeldedaten überprüft werden und der `token` erstellt wird.
+
+### Homepage.vue
+* Hier findet momentan lediglich die Abmeldung statt. 
+    * `logout`Der token wird hier entfernt und der Benutzer kommt wieder zu Anmeldeseite.
+
+### SensorOne.vue
+* Die Daten des Feuchtigkeitssensors werden hiereingebunden und visualisiert.
+    * `const uri = '/api/getLastWeek'` Das ist der Endpunkt an dem die Sensordaten abgerufen werden und ins Frontend eingebunden werden.
+    * `calcHeight` Ist dafür zuständig das die Snesordaten visualisiert werden. 
 
 ## Energiebedarf
 
