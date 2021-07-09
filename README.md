@@ -39,7 +39,7 @@ Mit **`axios`** wird mit dem Backend kommuniziert.
 ## Energiebedarf
 
 ### ESP8266 LUA Amica V2
-* Elektrische Kennlinie:<p>
+* Elektrische Kennlinie:
     * 3.3V betrieben
     * 15mA Ausgangsstrom pro GPIO-Pin
     * 12 - 200 mA Arbeitsstrom
