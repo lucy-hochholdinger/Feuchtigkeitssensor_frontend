@@ -54,9 +54,8 @@ Mit **`axios`** wird mit dem Backend kommuniziert.
 * Unsere Messbereiche: 0 - 4095 (nass: 0, trocken: 4095)
 * Unserer Messinterval: 6 Stunden (4mal täglich)
 * Stromversorgung: Solarset 20W mit Akku "https://www.amazon.de/Esotec-120005-Solar-Set-Anschlusskabel-Laderegler/dp/B01GNOFKEM"
--> Dieser hat eine Akkukapazität von 8Ah
+<br> -> Dieser hat eine Akkukapazität von 8Ah
 Da der ESP8266 den Sleep-Modus hat kann man dadurch sehr viel Strom sparen. 
-<p>
 
 ## Future Work
 Um das Produkt für mehrere Nutzer zu verwenden müsste man einziges noch verändern.
