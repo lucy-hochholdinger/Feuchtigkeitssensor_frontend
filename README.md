@@ -35,10 +35,11 @@ Mit **`axios`** wird mit dem Backend kommuniziert.
 ### Registration.vue
 * Dies ist die Registrierung, also die erste Anmeldung, in unserer Webapp.
     * `registerUser` Hier wird die E-Mailadresse, Benutzername und Passwort abgespeichert. Das Passwort wird allerdings direkt verschlüsselt.
-    * Das ist der Endpunkt an dem die Registrierungsdaten abgespeichert werden`const uri = '/api/register'`.
+    * `const uri = '/api/register'` Das ist der Endpunkt an dem die Registrierungsdaten abgespeichert werden.
 
 ### LogIn.vue
-* 
+* Hier meldet man sich nach der Registrierung an. Es werden Benutzername und das verschlüsselte Passwort überprüft und wenn das übereinstimmt wird ein token erstellt. Jeder Benutzer hat ein anderes token, dass sich bei jeder Anmeldung ändert.
+    * 
 
 ## Energiebedarf
 
