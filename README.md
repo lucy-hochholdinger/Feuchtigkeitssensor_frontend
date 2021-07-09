@@ -29,7 +29,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Aufbau
 Dadurch das es ein Vue.js Projekt ist gibt es mehrere Dateien.
+Mit **`axios`** wird mit dem Backend kommuniziert.
 ### App.vue
 * Hier wird die Registration.vue, LogIn.vue und die `<router-view>` eingebunden 
 
-### Registration
+### Registration.vue
+* Dies ist die Registrierung, also die erste Anmeldung, in unserer Webapp.
+**`registerUser`** Hier wird die E-Mailadresse, Benutzername und Passwort abgespeichert. Das Passwort wird allerdings direkt verschlüsselt.
