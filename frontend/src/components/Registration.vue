@@ -66,11 +66,11 @@ export default {
   #Registration {
     overflow: hidden;
     position: fixed;
-    background-color: #7C9D42;
     width: 375px;
     height: 667px;
     top: 0;
     left: 0;
+    background-color: #7C9D42;
   }
 
   #bubble4 {
