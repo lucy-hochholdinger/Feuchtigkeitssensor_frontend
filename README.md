@@ -90,8 +90,9 @@ Um das Produkt für mehrere Nutzer zu verwenden müsste man einziges noch verän
     * Software aktuell halten
 * Code:
     * die Wetter Api muss noch eingebunden werden, damit man das aktuelle Wetter sehen kann
-    * mehrere Sensoren einpflegen und ihre räumlich Verteilung darstellen
     * Pairing- Prozess: Wie werden Erfassungsmodule Nutzern zugeordnet
     * Der Nutzer soll die Sensoren einzelnen Felder zu weisen können und die jeweilige Pflanzenart eintragen können, dass wenn zu viel oder zu wenig Wasser vorhanden ist ein Alarm ausgelöst wird.
     * Einen Ruhemodus für die ESPs -> weniger Energiebedarf
+    * Den Menüpunkt hinzufügen ausarbeiten, mehrere Sensoren einpflegen und ihre räumlich Verteilung darstellen
+    * Den Menüpunkt Profil ausarbeiten, Benutzername von der Registrierung/Anmeldung übernehmen, Profilbild hinzufügen etc.
 
