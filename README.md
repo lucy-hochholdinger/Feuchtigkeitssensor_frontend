@@ -37,23 +37,23 @@ Mit **`axios`** wird mit dem Backend kommuniziert.
 **`registerUser`** Hier wird die E-Mailadresse, Benutzername und Passwort abgespeichert. Das Passwort wird allerdings direkt verschlüsselt.
 
 ## Energiebedarf
-### ESP8266 LUA Amica V2
 
-Elektrische Kennlinie:<p>
-* 3.3V betrieben
-* 15mA Ausgangsstrom pro GPIO-Pin
-* 12 - 200 mA Arbeitsstrom
-* weniger als 200 uA Standby-Strom
+### ESP8266 LUA Amica V2
+* Elektrische Kennlinie:<p>
+    * 3.3V betrieben
+    * 15mA Ausgangsstrom pro GPIO-Pin
+    * 12 - 200 mA Arbeitsstrom
+    * weniger als 200 uA Standby-Strom
 
 ### ESP32 DevKit C V4
-Elektrische Kennlinie:
-* 3.3V betrieben
-* 15mA Ausgangsstrom pro GPIO-Pin
-* 80 mA durchschnittlicher Arbeitsstrom<p>
+* Elektrische Kennlinie:
+    * 3.3V betrieben
+    * 15mA Ausgangsstrom pro GPIO-Pin
+    * 80 mA durchschnittlicher Arbeitsstrom<p>
 
-Unsere Messbereiche: 0 - 4095 (nass: 0, trocken: 4095)
-Unserer Messinterval: 6 Stunden (4mal täglich)
-Stromversorgung: Solarset 20W mit Akku "https://www.amazon.de/Esotec-120005-Solar-Set-Anschlusskabel-Laderegler/dp/B01GNOFKEM"
+* Unsere Messbereiche: 0 - 4095 (nass: 0, trocken: 4095)
+* Unserer Messinterval: 6 Stunden (4mal täglich)
+* Stromversorgung: Solarset 20W mit Akku "https://www.amazon.de/Esotec-120005-Solar-Set-Anschlusskabel-Laderegler/dp/B01GNOFKEM"
 -> Dieser hat eine Akkukapazität von 8Ah
 Da der ESP8266 den Sleep-Modus hat kann man dadurch sehr viel Strom sparen. 
 <p>
