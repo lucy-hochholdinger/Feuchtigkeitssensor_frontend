@@ -45,4 +45,20 @@ Stromversorgung: Solarset 20W mit Akku "https://www.amazon.de/Esotec-120005-Sola
 Da der ESP8266 den Sleep-Modus hat kann man dadurch sehr viel Strom sparen. 
 <p>
 
+<h2>Future Work</h2>
+Um das Produkt für mehrere Nutzer zu verwenden müsste man einziges noch verändern.<br>
+Hülle:<br>
+- wasserfest, da die Elektronik nicht unter gewissen Wetterbedienungen leiden darf<br>
+- das Material muss stabil sein, sodass man es gut in die Erde bekommt, am besten sollte es aus Verbundwerkstoffe oder feste Resine hergestellt sein<br>
+- das komplette Produkt darf auch nicht zu dimensional sein, wegen Diebstahlsicherheit<br>
+Datenbank:<br>
+- unsere Datenbank macht erst Sinn wenn man für mehrere Jahre die Prognose sieht, deswegen benötigen wir eine Datenbank mit einer großen Kapazität, zum Beispiel MySQL oder Team Desk(Enterprise Edition -> unlimited database)<br>
+Ausfallsicherheit:<br>
+- falls die Solaranlage nicht genügend Energie produziert, bekommt der Nutzer eine Benachrichtigung + den Standort<br>
+- eventuell noch zusätzlichen Speicher,  sodass der ESP trotzdem weiter messen kann<br>
+- Backups anlegen<br>
+(Sicherheits-)Update:<br>
+- nur die nötigsten Daten angeben lassen und nicht alles<br>
+- nur Standort von den Messstationen anzeigen, nicht den Home Standort<br>
+- Software aktuell halten<br>
 
