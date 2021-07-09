@@ -66,12 +66,12 @@ Hülle:
 * das komplette Produkt darf auch nicht zu dimensional sein, wegen Diebstahlsicherheit
 Datenbank:
 * unsere Datenbank macht erst Sinn wenn man für mehrere Jahre die Prognose sieht, deswegen benötigen wir eine Datenbank mit einer großen Kapazität, zum Beispiel MySQL oder Team Desk(Enterprise Edition -> unlimited database)
-Ausfallsicherheit:
-* falls die Solaranlage nicht genügend Energie produziert, bekommt der Nutzer eine Benachrichtigung + den Standort
-* eventuell noch zusätzlichen Speicher,  sodass der ESP trotzdem weiter messen kann
+* Ausfallsicherheit:
+    * falls die Solaranlage nicht genügend Energie produziert, bekommt der Nutzer eine Benachrichtigung + den Standort
+    * eventuell noch zusätzlichen Speicher,  sodass der ESP trotzdem weiter messen kann
 * Backups anlegen
-(Sicherheits-)Update:
-* nur die nötigsten Daten angeben lassen und nicht alles<
-* nur Standort von den Messstationen anzeigen, nicht den Home Standort
-* Software aktuell halten
+* (Sicherheits-)Update:
+    * nur die nötigsten Daten angeben lassen und nicht alles
+    * nur Standort von den Messstationen anzeigen, nicht den Home Standort
+    * Software aktuell halten
 
