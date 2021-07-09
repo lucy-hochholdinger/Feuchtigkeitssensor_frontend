@@ -8,7 +8,7 @@
 
 <script>
 import LogIn from './components/LogIn.vue'
-import Registration from './components/Registration.vue'
+import Registration from './components/Registrierung.vue'
 
 export default {
   name: 'App',
