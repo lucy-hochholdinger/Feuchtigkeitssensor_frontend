@@ -49,7 +49,7 @@ Mit **`axios`** wird mit dem Backend kommuniziert.
 * Elektrische Kennlinie:
     * 3.3V betrieben
     * 15mA Ausgangsstrom pro GPIO-Pin
-    * 80 mA durchschnittlicher Arbeitsstrom<p>
+    * 80 mA durchschnittlicher Arbeitsstrom
 
 * Unsere Messbereiche: 0 - 4095 (nass: 0, trocken: 4095)
 * Unserer Messinterval: 6 Stunden (4mal täglich)
